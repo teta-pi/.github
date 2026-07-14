@@ -1,26 +1,27 @@
 # TETA+PI (Θ+π)
 
-**Trust infrastructure for the Agent Internet.**
+**Trust Infrastructure for Digital Entities.**
 
 AI agents are already searching, booking, and transacting autonomously —
-but there's no standard way to verify the businesses and people they're dealing with.
-
-**TETA+PI closes that gap.**
+but there's no standard way to verify who they're dealing with. People,
+companies, APIs, AI models, MCP servers, and agents all need a way to prove
+who they are and be found. TETA+PI closes that gap.
 
 ## What we build
 
 | Repo | Description |
 |------|-------------|
-| [protocol](https://github.com/teta-pi/protocol) | Open verification standard — MIT |
-| [mcp-server](https://github.com/teta-pi/mcp-server) | Verified entity registry for AI agents |
-| [platform](https://github.com/teta-pi/platform) | Verification platform — tetapi.dev |
-| [pi-camera](https://github.com/teta-pi/pi-camera) | Cryptographic camera — C2PA + Bitcoin OTS |
+| [api](https://github.com/teta-pi/api) | FastAPI backend — registry/email/domain verification, C2PA + Bitcoin proof chain |
+| [web](https://github.com/teta-pi/web) | Next.js 15 app — claim and manage a verified profile |
+| [mcp](https://github.com/teta-pi/mcp) | MCP server — 7 tools exposing the registry to AI agents |
+| [landing](https://github.com/teta-pi/landing) | Marketing site — tetapi.dev |
+| [infra](https://github.com/teta-pi/infra) | Canonical docs + deploy configuration |
 
 ## The analogy
 
 SSL made HTTPS trustworthy.
 MCP connected agents to tools.
-**TETA+PI makes entities in the Agent Internet verifiable.**
+**TETA+PI makes digital entities verifiable.**
 
 ## Connect an agent
 
@@ -28,10 +29,10 @@ MCP connected agents to tools.
 {
   "mcpServers": {
     "tetapi": {
-      "url": "https://tetapi.dev/mcp"
+      "url": "https://mcp.tetapi.dev/sse"
     }
   }
 }
 ```
 
-🌐 [tetapi.dev](https://tetapi.dev) · 📍 Berlin, Germany
+🌐 [tetapi.dev](https://tetapi.dev)
