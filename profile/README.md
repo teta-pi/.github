@@ -16,6 +16,8 @@ who they are and be found. TETA+PI closes that gap.
 | [mcp](https://github.com/teta-pi/mcp) | MCP server — 7 tools exposing the registry to AI agents |
 | [landing](https://github.com/teta-pi/landing) | Marketing site — tetapi.dev |
 | [infra](https://github.com/teta-pi/infra) | Canonical docs + deploy configuration |
+| [pi-cam](https://github.com/teta-pi/pi-cam) | Pi CAM — React Native/Expo capture app, on-device C2PA signing (private repo) |
+| [wordpress-plugin](https://github.com/teta-pi/wordpress-plugin) | WordPress plugin — domain verification + verified-badge widget |
 
 ## The analogy
 
@@ -29,7 +31,7 @@ MCP connected agents to tools.
 {
   "mcpServers": {
     "tetapi": {
-      "url": "https://mcp.tetapi.dev/sse"
+      "url": "https://mcp.tetapi.dev/mcp"
     }
   }
 }
