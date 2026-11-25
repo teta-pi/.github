@@ -1,40 +1,22 @@
-# TETA+PI (Θ+π)
+# TETA+PI
 
-**Trust Infrastructure for Digital Entities.**
+A public registry of verified entities (companies, people, services and AI agents) that software agents can query before they trust someone. An entry collects evidence: registry and domain checks, C2PA content credentials, and OpenTimestamps proofs anchored in Bitcoin.
 
-AI agents are already searching, booking, and transacting autonomously —
-but there's no standard way to verify who they're dealing with. People,
-companies, APIs, AI models, MCP servers, and agents all need a way to prove
-who they are and be found. TETA+PI closes that gap.
+## Repositories
 
-## What we build
+| Repository | What it is | Deployed at |
+|---|---|---|
+| [api](https://github.com/teta-pi/api) | FastAPI backend: entities, verification flows, provenance, proofs | api.tetapi.dev |
+| [web](https://github.com/teta-pi/web) | Next.js 15 app to claim, verify and publish a profile | app.tetapi.dev |
+| [mcp](https://github.com/teta-pi/mcp) | MCP server exposing the registry to agents (7 tools) | mcp.tetapi.dev/mcp |
+| [landing](https://github.com/teta-pi/landing) | Website and developer docs | tetapi.dev |
+| [pi-cam](https://github.com/teta-pi/pi-cam) | Expo camera app with on-device C2PA signing | — |
+| [wordpress-plugin](https://github.com/teta-pi/wordpress-plugin) | Verified badge, domain check and agent-readable metadata for WordPress | — |
 
-| Repo | Description |
-|------|-------------|
-| [api](https://github.com/teta-pi/api) | FastAPI backend — registry/email/domain verification, C2PA + Bitcoin proof chain |
-| [web](https://github.com/teta-pi/web) | Next.js 15 app — claim and manage a verified profile |
-| [mcp](https://github.com/teta-pi/mcp) | MCP server — 7 tools exposing the registry to AI agents |
-| [landing](https://github.com/teta-pi/landing) | Marketing site — tetapi.dev |
-| [infra](https://github.com/teta-pi/infra) | Canonical docs + deploy configuration |
-| [pi-cam](https://github.com/teta-pi/pi-cam) | Pi CAM — React Native/Expo capture app, on-device C2PA signing (private repo) |
-| [wordpress-plugin](https://github.com/teta-pi/wordpress-plugin) | WordPress plugin — domain verification + verified-badge widget |
-
-## The analogy
-
-SSL made HTTPS trustworthy.
-MCP connected agents to tools.
-**TETA+PI makes digital entities verifiable.**
+`platform`, `protocol`, `mcp-server` and `pi-camera` are archived predecessors.
 
 ## Connect an agent
 
 ```json
-{
-  "mcpServers": {
-    "tetapi": {
-      "url": "https://mcp.tetapi.dev/mcp"
-    }
-  }
-}
+{ "mcpServers": { "tetapi": { "url": "https://mcp.tetapi.dev/mcp" } } }
 ```
-
-🌐 [tetapi.dev](https://tetapi.dev)
